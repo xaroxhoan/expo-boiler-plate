@@ -2,7 +2,7 @@
   "expo": {
     "name": "expo-an",
     "slug": "expo-an",
-    "schema": "expo-an",
+    "scheme": "expo-an",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

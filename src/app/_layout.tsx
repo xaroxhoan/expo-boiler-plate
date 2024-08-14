@@ -1,22 +1,17 @@
-import { Slot } from "expo-router";
-import { View, Text } from "react-native";
-import Header from "../components/Header/Header";
+import { Slot, Stack } from "expo-router";
 import styled from "rn-css/.";
 import { Provider } from "react-redux";
 import { persistor, store } from "../store/store";
 import { PersistGate } from "redux-persist/integration/react";
+import { SessionProvider } from "../providers/session";
 
-// this is root layout
-// all redux goes here
-
-export default function MainLayout() {
+export default function RootLayout() {
   return (
     <Provider store={store}>
       <PersistGate persistor={persistor} loading={null}>
-        <Container>
-          <Header />
+        <SessionProvider>
           <Slot />
-        </Container>
+        </SessionProvider>
       </PersistGate>
     </Provider>
   );
