@@ -2,8 +2,12 @@ import { Text, TouchableOpacity, View } from "react-native";
 import styled from "rn-css/.";
 import Form from "../../components/Form/Form";
 import { useForm } from "react-hook-form";
-import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { CText } from "../../global/Styles";
+import yup from "../../config/yup";
+import { useDispatch } from "react-redux";
+import Password from "../../components/Password/Password";
+import { useState } from "react";
 
 const schema = yup
   .object({
@@ -12,10 +16,11 @@ const schema = yup
   })
   .required();
 export default function Login() {
+  const dispatch = useDispatch();
   const form = useForm({
     resolver: yupResolver(schema),
     defaultValues: {
-      email: "mehdi.khalafi@outlook.com",
+      email: "",
       password: "",
     },
   });
@@ -33,14 +38,14 @@ export default function Login() {
       <LoginFormCard>
         <Form form={form} onSubmit={handleSubmit}>
           <InputField>
-            <InputLabel>Email</InputLabel>
+            <InputLabel>{"ایمیل"}</InputLabel>
             <Form.Item name="email">
               <Input />
             </Form.Item>
           </InputField>
 
           <InputField>
-            <InputLabel>Password</InputLabel>
+            <InputLabel>کلمه عبور</InputLabel>
 
             <Form.Item name="password">
               <Password />
@@ -48,7 +53,7 @@ export default function Login() {
           </InputField>
 
           <SubmitBtn>
-            <SubmitBtnTxt>Submit</SubmitBtnTxt>
+            <SubmitBtnTxt>ورود</SubmitBtnTxt>
           </SubmitBtn>
         </Form>
       </LoginFormCard>
@@ -96,7 +101,7 @@ const LoginFormCard = styled.View.attrs({
 
 const InputField = styled.View``;
 
-const InputLabel = styled.Text`
+const InputLabel = styled(CText)`
   font-weight: 400;
   &::after {
     content: "*";
@@ -105,17 +110,14 @@ const InputLabel = styled.Text`
 
 const Input = styled.TextInput`
   height: 3rem;
-  border: 1px solid #ccc;
+  background-color: #ede7f6;
   border-radius: 0.5rem;
   padding: 0 0.5rem;
 
   &:focus {
     border: 2px solid #651fff;
+    outline: none;
   }
-`;
-
-const Password = styled(Input).attrs({ secureTextEntry: true })`
-  height: 3rem;
 `;
 
 const SubmitBtn = styled(Form.Submit)`
@@ -127,7 +129,7 @@ const SubmitBtn = styled(Form.Submit)`
   border-radius: 0.5rem;
 `;
 
-const SubmitBtnTxt = styled.Text`
+const SubmitBtnTxt = styled(CText)`
   color: white;
   font-size: 1.25rem;
 `;

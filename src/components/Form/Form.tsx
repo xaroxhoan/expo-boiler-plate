@@ -1,7 +1,8 @@
 import React, { ReactNode, useContext, useEffect, useMemo } from "react";
-import { Controller, useForm } from "react-hook-form";
-import { Pressable, View, Text } from "react-native";
+import { Controller } from "react-hook-form";
+import { Pressable, View } from "react-native";
 import styled from "rn-css/.";
+import { CText } from "../../global/Styles";
 
 type FormType = {
   form: any;
@@ -35,8 +36,6 @@ const Form: React.FC<FormType> & FormSectionType = ({
   const submit = (data: any) => {
     onSubmit && onSubmit(data);
   };
-
-  console.log(form);
 
   return (
     <FormContext.Provider value={{ ...form, submit }}>
@@ -93,7 +92,9 @@ const FormSubmit: React.FC<FormSubmitType> = ({ children, ...rest }) => {
 Form.Item = FormItem as any;
 Form.Submit = FormSubmit as any;
 
-const ErrorMessage = styled.Text`
+const ErrorMessage = styled(CText)`
   color: #f44336;
+  font-size: 0.75rem;
+  font-weight: 500;
 `;
 export default Form;
