@@ -8,6 +8,7 @@ import yup from "../../config/yup";
 import { useDispatch } from "react-redux";
 import Password from "../../components/Password/Password";
 import { useState } from "react";
+import { setLogin } from "../../store/auth";
 
 const schema = yup
   .object({
@@ -26,7 +27,7 @@ export default function Login() {
   });
 
   const handleSubmit = (e: any) => {
-    console.log(e);
+    dispatch(setLogin({ token: "token" } as any));
   };
 
   return (

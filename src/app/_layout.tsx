@@ -24,17 +24,20 @@ export default function RootLayout() {
   if (!loaded && !error) {
     return null;
   }
+
   return (
     <Provider store={store}>
       <PersistGate persistor={persistor} loading={null}>
         <SessionProvider>
-          <Slot />
+          <Container>
+            <Slot />
+          </Container>
         </SessionProvider>
       </PersistGate>
     </Provider>
   );
 }
 
-const Container = styled.View`
+const Container = styled.SafeAreaView`
   flex: 1;
 `;

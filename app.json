@@ -20,10 +20,13 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "ir.khaneaval",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "supportsRTL": true,
+      "forcesRTL": true
     },
     "web": {
       "bundler": "metro",

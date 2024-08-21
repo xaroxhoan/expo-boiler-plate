@@ -51,8 +51,6 @@ const FormItem: React.FC<FormItemType> = ({ children, name }) => {
     formState: { errors },
   } = useContext(FormContext);
 
-  useEffect(() => console.log(errors), [errors]);
-
   return (
     <Controller
       name={name}

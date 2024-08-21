@@ -1,21 +1,29 @@
 import { forwardRef, useState } from "react";
-import { View } from "react-native";
+import { KeyboardAvoidingView, Pressable, View } from "react-native";
 import styled from "rn-css/.";
-import Ionicons from "@react-native-vector-icons/ionicons";
+import Ant from "@expo/vector-icons/Ionicons";
 
-const Password: React.FC<any> = forwardRef(function (ref, props) {
-  const [focused, setFocused] = useState(false);
+const Password: React.FC<any> = forwardRef(function (props, ref) {
+  const [showPassword, setshowPassword] = useState(false);
 
   return (
-    <Container focusable={true}>
-      <Input secureTextEntry={true} {...props} ref={ref} />
-      <View>
-        <Ionicons />
-      </View>
-    </Container>
+    <KeyboardAvoidingView>
+      <Container focusable={true}>
+        <EyeBtn onPress={() => setshowPassword((curr) => !curr)}>
+          {showPassword ? (
+            <Ant name="eye-off-outline" size={24} color="blue" />
+          ) : (
+            <Ant name="eye-outline" size={24} color="blue" />
+          )}
+        </EyeBtn>
+
+        <Input secureTextEntry={!showPassword} ref={ref} {...props} />
+      </Container>
+    </KeyboardAvoidingView>
   );
 });
-const Container = styled.View`
+const Container = styled.View<any>`
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
@@ -25,7 +33,11 @@ const Container = styled.View`
   padding: 0 0.5rem;
 
   &:focus-within {
+  }
+
+  &:focus {
     border: 2px solid #651fff;
+    outline: none;
   }
 `;
 
@@ -38,4 +50,6 @@ const Input = styled.TextInput`
     outline: none;
   }
 `;
+
+const EyeBtn = styled(Pressable)``;
 export default Password;
