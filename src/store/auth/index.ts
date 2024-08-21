@@ -2,6 +2,6 @@ import { authSlice } from "./auth";
 
 const authReducer = authSlice.reducer;
 
-const { setLogin } = authSlice.actions;
+const { setLogin, setLogout } = authSlice.actions;
 
-export { authReducer, setLogin };
+export { authReducer, setLogin, setLogout };

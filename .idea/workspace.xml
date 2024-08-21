@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9beb97b-be7b-4b8b-99f7-31c979a1fbf0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/_layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(main)/Settings.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(main)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(main)/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(main)/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/auth/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/auth/auth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/auth/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/auth/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +38,7 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/E/develop/expo-boiler-plate"
+    "last_opened_file_path": "D:/E/develop/expo-boiler-plate/android"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

@@ -18,7 +18,7 @@ export default function MainLayout() {
       }}
     >
       <Tabs.Screen
-        name="index"
+        name="Home"
         options={{
           title: "Home",
           tabBarIcon: ({ focused, color }) => {
@@ -37,6 +37,20 @@ export default function MainLayout() {
         name="Settings"
         options={{
           title: "Settings",
+          tabBarIcon: ({ focused, color }) => (
+            <Icon
+              name={focused ? "settings" : "settings-outline"}
+              size={24}
+              color={color}
+            />
+          ),
+        }}
+      />
+
+      <Tabs.Screen
+        name="Messages"
+        options={{
+          headerShown: false,
           tabBarIcon: ({ focused, color }) => (
             <Icon
               name={focused ? "settings" : "settings-outline"}

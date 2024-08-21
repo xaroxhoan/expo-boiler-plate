@@ -1,10 +1,10 @@
 import { Text, View } from "react-native";
 
-const Settings = () => {
+const Draw1 = () => {
   return (
     <View>
-      <Text>Setting</Text>
+      <Text>drawer 1</Text>
     </View>
   );
 };
-export default Settings;
+export default Draw1;
