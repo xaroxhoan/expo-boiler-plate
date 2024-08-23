@@ -1,8 +1,19 @@
-import { Redirect } from "expo-router";
-import { useSelector } from "react-redux";
+import { StyleSheet, Text, View } from 'react-native';
 
 export default function Home() {
-  const isLoggedIn = useSelector((s: any) => s.auth.isLoggedIn);
+  const { container } = styles;
 
-  return isLoggedIn ? <Redirect href="(home)" /> : <Redirect href="auth" />;
+  return (
+    <View style={container}>
+      <Text>home</Text>
+    </View>
+  );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});

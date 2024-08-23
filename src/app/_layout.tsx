@@ -1,19 +1,19 @@
-import { Slot, Stack } from "expo-router";
-import styled from "rn-css/.";
-import { Provider } from "react-redux";
-import { persistor, store } from "../store/store";
-import { PersistGate } from "redux-persist/integration/react";
-import { SessionProvider } from "../providers/session";
-import { useFonts } from "expo-font";
-import * as SplashScreen from "expo-splash-screen";
-import { useEffect } from "react";
-import { I18nManager } from "react-native";
+import { Stack } from 'expo-router';
+import styled from 'rn-css/.';
+import { Provider } from 'react-redux';
+import { persistor, store } from '~/store/store';
+import { PersistGate } from 'redux-persist/integration/react';
+import { SessionProvider } from '~/providers/session';
+import { useFonts } from 'expo-font';
+import * as SplashScreen from 'expo-splash-screen';
+import { useEffect } from 'react';
+import { I18nManager } from 'react-native';
 
 export default function RootLayout() {
   const [loaded, error] = useFonts({
-    IRANSans: require("~/assets/fonts/iransans/ttf/IRANSansWeb.ttf"),
+    IRANSans: require('~/assets/fonts/iransans/ttf/IRANSansWeb.ttf'),
 
-    Aban: require("~/assets/fonts/aban/aban.ttf"),
+    Aban: require('~/assets/fonts/aban/aban.ttf'),
   });
 
   useEffect(() => {
@@ -34,13 +34,7 @@ export default function RootLayout() {
       <PersistGate persistor={persistor} loading={null}>
         <SessionProvider>
           <Container>
-            <Stack screenOptions={{ headerShown: false }}>
-              <Stack.Screen name="index" />
-
-              <Stack.Screen name="(home)" />
-
-              <Stack.Screen name="auth" />
-            </Stack>
+            <Stack screenOptions={{ headerShown: false }} />
           </Container>
         </SessionProvider>
       </PersistGate>
