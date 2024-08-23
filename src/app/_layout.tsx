@@ -1,9 +1,9 @@
 import { Slot, Stack } from "expo-router";
 import styled from "rn-css/.";
 import { Provider } from "react-redux";
-import { persistor, store } from "../store/store";
+import { persistor, store } from "~/store/store";
 import { PersistGate } from "redux-persist/integration/react";
-import { SessionProvider } from "../providers/session";
+import { SessionProvider } from "~/providers/session";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
@@ -35,11 +35,7 @@ export default function RootLayout() {
         <SessionProvider>
           <Container>
             <Stack screenOptions={{ headerShown: false }}>
-              <Stack.Screen name="index" />
-
-              <Stack.Screen name="(home)" />
-
-              <Stack.Screen name="auth" />
+              <Stack.Screen name="(app)" />
             </Stack>
           </Container>
         </SessionProvider>

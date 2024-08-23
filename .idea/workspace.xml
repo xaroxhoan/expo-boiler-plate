@@ -4,16 +4,17 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9beb97b-be7b-4b8b-99f7-31c979a1fbf0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="b9beb97b-be7b-4b8b-99f7-31c979a1fbf0" name="Changes" comment="chore: change structure">
+      <change afterPath="$PROJECT_DIR$/src/app/(app)/(home)/_layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(main)/Settings.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(main)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(main)/_layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(main)/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/auth/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/auth/auth.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/auth/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/auth/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(home)/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/(home)/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/auth/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/auth/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/signup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/auth/signup.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +24,24 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="auth-route-pattern-one" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
   <component name="ProjectId" id="2kdoBTwEsq06eTyXmhjCP3l4QNX" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -33,14 +49,28 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/E/develop/expo-boiler-plate/android"
+    "git-widget-placeholder": "auth-route-pattern-two",
+    "last_opened_file_path": "D:/E/develop/expo-boiler-plate",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "ts.external.directory.path": "D:\\E\\develop\\expo-boiler-plate\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\E\develop\expo-boiler-plate\src\app\(app)\(home)" />
+      <recent name="D:\E\develop\expo-boiler-plate\src\app\(home)" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -49,7 +79,36 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1723622678549</updated>
+      <workItem from="1724415510882" duration="2115000" />
     </task>
+    <task id="LOCAL-00001" summary="chore: change structure">
+      <option name="closed" value="true" />
+      <created>1724415849739</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1724415849739</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add tab views" />
+    <MESSAGE value="chore: change structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: change structure" />
   </component>
 </project>

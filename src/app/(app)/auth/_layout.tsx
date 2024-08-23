@@ -11,7 +11,7 @@ export default function AuthLayout() {
   useEffect(() => {
     console.log({ isLoggedIn });
     if (isLoggedIn) {
-      router.replace("/(home)/index");
+      router.replace("/");
     }
   }, [isLoggedIn]);
 
@@ -30,7 +30,7 @@ export default function AuthLayout() {
 
 function Header(props: any) {
   const { options } = props;
-  console.log({ props });
+
   return (
     <HeaderContainer>
       <Text>{options.title}</Text>
