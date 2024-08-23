@@ -1,14 +1,12 @@
-import { Text, TouchableOpacity, View } from "react-native";
 import styled from "rn-css/.";
-import Form from "../../components/Form/Form";
+import Form from "~/components/Form/Form";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { CText } from "../../global/Styles";
-import yup from "../../config/yup";
+import { CText } from "~/global/Styles";
+import yup from "~/config/yup";
 import { useDispatch } from "react-redux";
-import Password from "../../components/Password/Password";
-import { useState } from "react";
-import { setLogin } from "../../store/auth";
+import Password from "~/components/Password/Password";
+import { setLogin } from "~/store/auth";
 
 const schema = yup
   .object({
@@ -16,7 +14,7 @@ const schema = yup
     password: yup.string().required(),
   })
   .required();
-export default function Login() {
+export default function SignIn() {
   const dispatch = useDispatch();
   const form = useForm({
     resolver: yupResolver(schema),
@@ -27,13 +25,14 @@ export default function Login() {
   });
 
   const handleSubmit = (e: any) => {
+    console.log(e);
     dispatch(setLogin({ token: "token" } as any));
   };
 
   return (
     <Container>
       <LogoCard>
-        <LogoImg source={require("../../../assets/img/logo.png")} />
+        <LogoImg source={require("~/assets/img/logo.png")} />
       </LogoCard>
 
       <LoginFormCard>

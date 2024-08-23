@@ -1,10 +1,9 @@
 import { Text, View } from "react-native";
 
-const Draw1 = () => {
+export default function SignUp() {
   return (
     <View>
-      <Text>drawer 1</Text>
+      <Text>sign up</Text>
     </View>
   );
-};
-export default Draw1;
+}
